@@ -1,0 +1,189 @@
+
+
+0netstat , ipconfig , arp -v , arp : to get an ip
+
+mine:50.225.39.60
+
+command :for /L %N in (1,1,254) do @nslookup 50.225.k.%N >> names.txt
+
+command2: @nslookup (put ip here) >> names.txt
+
+command 3(for shutdown):shutdown -i
+
+command 4 (to find where an ip is coming from):tracert (put ip here)
+
+hacking wifi: step1:netsh wlan show network mode=bssid ; step2: netsh wlan connect name=*wifi name* ; to disconnect -netsh wlan disconnect
+
+command 5:net view
+
+command 6:<dos attack>: ping -t -l <bytes for attack,eg.65500> <ip_address>
+
+similar attack: ping <address> -l 65500 -w -n (number of attacks)
+
+command 7:netuser *resets password without knowing old one*
+
+command 8:tasklist *task manager in cmd*
+
+hack :netsh wlan show profiles, netsh wlan show profiles <wifi name> key=clear
+
+command 9: net use *connecting to printers and stuff idk*
+
+command 10:pathping *more verbose tracert*
+
+school server ip adressess:
+          185.199.110.153
+          185.199.109.153
+          185.199.111.153
+          185.199.108.153		  
+jos.onion: 92.242.140.21
+command 11:route 
+hack:net use \ipaddressipc$ “” /user:administrator,(this command will allow you to connect to the target as administrator)
+hack:psexec \\target_ip command 
+hack*see/change firewall*: netsh advfirewall 
+command(see current tasks): tasklist
+command shut down a task: taskkill /F /IM "put task here with .exe" /T
+command: start *task*
+command: start microsoft.windows.camera 
+command better netsh: netsh wlan show all 
+command add mask:route CHANGE <real ip> MASK <mask>
+command: psshutdown \\<target> -m *message*
+school server db:file://chhmdf1svde004.inst.hcpss.org/homedir$/
+hack: net localgroup shows info and computer name 
+help:https://www.techwalla.com/articles/how-to-connect-to-a-remote-computer-using-command-prompt
+hack:mstc /v:
+http://torum6uvof666pzw.onion - username; whythobruh password is the same
+http://qodgnvw372ytwhgsfmftslnwsqmi7gv2c5pvqowa4yhlvp56mymx3iqd.onion/index.php- richard,gorden
+https://github.com/DanWin/le-chat-php/blob/master/chat.php- source code for le-chat 
+technologyseminar.org - ip : 184.168.131.241
+name of tech seminar server:ip-184-168-131-241.ip.secureserver.net
+nice landing page:http://torum6uvof666pzw.onion/index.php?sid=217036d1f383120c7f8531a86c96935e
+roblox ip:128.116.35.227
+enter in wirshark for password thing:http.request.method == POST
+hack idea: subnet mask getaway , connect to hcpss guest using netsh , use POST filter(above) in wireshark , see everyones passwords  
+best ip lookup: https://www.opentracker.net/feature/ip-tracker?ip=172.217.12.195#
+netsh wlan stop- stops hosting wifi 
+https://www.guru99.com/ethical-hacking-tutorials.html tutorial
+UNIX username:human nature 
+UNIX password:contradiction
+        |-----------
+        |-http://3ehzuhculg42rosa.onion/
+nice<---|-http://ddosecretspzwfy7.onion/data/mena/#syria
+        |-https://snowdenarchive.cjfe.org/greenstone/cgi-bin/library.cgi?e=d-00100-00---off-0snowden1--00-2----0-10-0---0---0direct-10----4-------0-1l--10-en-50---50-about---01-3-1-00-00--4--0--0-0-01-10-0utfZz-8-00&a=d&c=snowden1&cl=CL2.1.1&d=HASH019f579ff720d70a040bb250
+        |-http://intel5vmppiwc4u6l5bisfdv7sazzlacrqcuze4wxqdavd5kltxru7qd.onion/leaks.htm
+		|-http://3ehzuhculg42rosa.onion/Intel/24742335-Bash-Shell-Referance.pdf
+		|-also check out project sphere in terminal links
+		|-http://3ehzuhculg42rosa.onion/Intel/Seven%20Deadliest%20USB%20Attacks.pdf
+		|-http://torum6uvof666pzw.onion/viewtopic.php?f=49&t=7664
+		|-----------
+		
+python stuff- http://torum6uvof666pzw.onion/viewtopic.php?f=34&t=3625
+
+netstat , ipconfig , arp -v , arp : to get an ip
+
+mine:50.225.39.60
+
+command :for /L %N in (1,1,254) do @nslookup 50.225.k.%N >> names.txt
+
+command2: @nslookup (put ip here) >> names.txt
+
+command 3(for shutdown):shutdown -i
+
+command 4 (to find where an ip is coming from):tracert (put ip here)
+
+hacking wifi: step1:netsh wlan show network mode=bssid ; step2: netsh wlan connect name=*wifi name* ; to disconnect -netsh wlan disconnect
+
+command 5:net view
+
+command 6:<dos attack>: ping -t -l <bytes for attack,eg.65500> <ip_address>
+
+similar attack: ping <address> -l 65500 -w -n (number of attacks)
+
+command 7:netuser *resets password without knowing old one*
+
+command 8:tasklist *task manager in cmd*
+
+hack :netsh wlan show profiles, netsh wlan show profiles <wifi name> key=clear
+
+command 9: net use *connecting to printers and stuff idk*
+
+command 10:pathping *more verbose tracert*
+
+school server ip adressess:
+          185.199.110.153
+          185.199.109.153
+          185.199.111.153
+          185.199.108.153		  
+jos.onion: 92.242.140.21
+command 11:route 
+hack:net use \ipaddressipc$ “” /user:administrator,(this command will allow you to connect to the target as administrator)
+hack:psexec \\target_ip command 
+hack*see/change firewall*: netsh advfirewall 
+command(see current tasks): tasklist
+command shut down a task: taskkill /F /IM "put task here with .exe" /T
+command: start *task*
+command: start microsoft.windows.camera 
+command better netsh: netsh wlan show all 
+command add mask:route CHANGE <real ip> MASK <mask>
+command: psshutdown \\<target> -m *message*
+school server db:file://chhmdf1svde004.inst.hcpss.org/homedir$/
+hack: net localgroup shows info and computer name 
+help:https://www.techwalla.com/articles/how-to-connect-to-a-remote-computer-using-command-prompt
+hack:mstc /v:
+http://torum6uvof666pzw.onion - username; whythobruh password is the same
+http://qodgnvw372ytwhgsfmftslnwsqmi7gv2c5pvqowa4yhlvp56mymx3iqd.onion/index.php- richard,gorden
+https://github.com/DanWin/le-chat-php/blob/master/chat.php- source code for le-chat 
+technologyseminar.org - ip : 184.168.131.241
+name of tech seminar server:ip-184-168-131-241.ip.secureserver.net
+nice landing page:http://torum6uvof666pzw.onion/index.php?sid=217036d1f383120c7f8531a86c96935e
+roblox ip:128.116.35.227
+enter in wireshark for password thing:http.request.method == POST
+hack idea: subnet mask getaway , connect to hcpss guest using netsh , use POST filter(above) in wireshark , see everyones passwords  
+best ip lookup: https://www.opentracker.net/feature/ip-tracker?ip=172.217.12.195#
+netsh wlan stop- stops hosting wifi 
+https://www.guru99.com/ethical-hacking-tutorials.html tutorial
+UNIX username:human nature 
+UNIX password:contradiction
+        |-----------
+        |-http://3ehzuhculg42rosa.onion/
+nice<---|-http://ddosecretspzwfy7.onion/data/mena/#syria
+        |-https://snowdenarchive.cjfe.org/greenstone/cgi-bin/library.cgi?e=d-00100-00---off-0snowden1--00-2----0-10-0---0---0direct-10----4-------0-1l--10-en-50---50-about---01-3-1-00-00--4--0--0-0-01-10-0utfZz-8-00&a=d&c=snowden1&cl=CL2.1.1&d=HASH019f579ff720d70a040bb250
+        |-http://intel5vmppiwc4u6l5bisfdv7sazzlacrqcuze4wxqdavd5kltxru7qd.onion/leaks.htm
+		|-http://3ehzuhculg42rosa.onion/Intel/24742335-Bash-Shell-Referance.pdf
+		|-also check out project sphere in terminal links
+		|-http://3ehzuhculg42rosa.onion/Intel/Seven%20Deadliest%20USB%20Attacks.pdf
+		|-http://torum6uvof666pzw.onion/viewtopic.php?f=49&t=7664
+		|-http://xfmro77i3lixucja.onion/forum/
+		|-http://intel5vmppiwc4u6l5bisfdv7sazzlacrqcuze4wxqdavd5kltxru7qd.onion/leaks.htm
+		|-----------
+
+ableonion-http://canxzwmfihdnn7bz.onion/
+		
+python stuff- http://torum6uvof666pzw.onion/viewtopic.php?f=34&t=3625
+________________________________________________________________________________
+********************************************************************************
+                                 My Blacklist
+
+1. Fake document producer, he has also provided a fake german diver license ad as well: (email)Alphadocuments@protonmail.com, (whatsapp*number?*) +1(215) 703-8537, (website) http://quickdocuments.online/
+
+2. Centennial High School,name=Marco , sells adderrall (more of a minor offense rlly tho)
+
+3. Cocaine dealer *fentanyl as well*: seems to be in the states more specifically in LA*or maybe CA*, (email) lemybeauty@protonmail.com, (wickr*no clue what this is*) Drugporn01, (whatsapp) +1 (408) 412-0793, (text) +1 (408) 412-0793
+  
+4. Centennial High School,name=Alan Hernandez , robs (more of a minor offense rlly tho), lives in plum tree   
+
+5.http://q7bztx3gbeq3c6fn.onion/search?view=gal&nol=1&q=hitman&sorttype=rel&page=1 a ton of hitmen  
+
+6.Intamite details of ccp members, 201812chinese
+
+********************************************************************************
+________________________________________________________________________________
+
+tor66-http://q7bztx3gbeq3c6fn.onion/search?view=gal&nol=1&q=hitman&sorttype=rel&page=1
+
+netsh wlan show wlanreport
+
+<nice_hack>
+a little trick you can use. Navigate to system32 folder and search for cmd. Rename it to cmd2. then search for utilman.exe and rename it to cmd.exe rename cmd2 to utilman.exe and restart. Once done click the "Help Icon" on your lock screen. It will give you a cmd window with full admin permissions. Change Admin password 
+</nice_hack>
+once you are in, go to net user, this will appear "Administrator  [name]", copy [name] and write; net user [name] *, you will be prompted to enter new password just do it   
+net user [name] /random *might work, control userpasswords2 
