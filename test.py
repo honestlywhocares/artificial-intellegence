@@ -1,7 +1,8 @@
 import m
 import matplotlib.pyplot as mp
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
+from mpl_toolkits.mp
+lot3d import Axes3D
 import math
 from scipy.integrate import solve_ivp
 def l(x):
@@ -386,8 +387,8 @@ def graph3(x_vals,y_vals):
  plt.plot(x_vals, y_vals)  
 
 def line(p1,p2):
- plt.scatter(p1[0],p1[1])
- plt.scatter(p2[0],p2[1])
+# plt.scatter(p1[0],p1[1])
+# plt.scatter(p2[0],p2[1])
  graph3([p1[0],p2[0]],[p1[1],p2[1]])
 
 def triangle(p1,p2,p3):
@@ -426,4 +427,3 @@ def fully_connected(points):
  for i in points:
   fully_connect(i,points)
  plt.show() 
-

@@ -2,6 +2,7 @@ import random
 import scipy
 from scipy.misc import toimage
 import numpy as np
+import ai_lib
 
 board = [['.','.','.','.','.','.','.','.','.','.'],
          ['.','.','.','.','.','.','.','.','.','.'],
@@ -93,7 +94,6 @@ def t(ship):
   return(4)  
  elif ship == 'cruiser':
   return(3) 
-
 
 def check_bound(uplr,ship,place):
  coor = translate(place)
