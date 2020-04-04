@@ -27,7 +27,7 @@ def help():
  print('''arcsin(x) --> gives the approximate value of arcsin(x)''')
  print('''sin(x) --> gives the value of sin(x)''')
  print('''factorial(x) --> gives the value of factorial x''')
- print('''special_factorial(x) --> gives less acurate value however works at non integer values as well''')
+ print('''special_factorial(x) --> gives less accurate value however works at non integer values as well''')
  print('''vertex(a,b,c) --> finds vertex of parabola with coefficiants a,b,c''')
  print('''equal(f1,f2,start,acc) --> finds solution to f1 = f2 start,acc are for increasing accuracy''')
  print('''spindle(d) --> gives area of spindle with diameter d''')
@@ -486,9 +486,9 @@ def standard_deviation(l):
  ans = nthroot(varience(l),2)
  return(ans)
 
-#[a,b,c
-# d,e,f,
-# g,h,i]
+ #[a,b,c
+ # d,e,f,
+ # g,h,i]
  l = []
  for i in range(int(rank)):
   l.append(s)
@@ -514,3 +514,115 @@ def e_eq(a,k):
 def sig(x):
  val = 1/(1+e**-x)
  return(val)
+
+def limit(func,val):
+ return(evaluate(func,val-0.000000000000000001))
+
+def solve_first_ode(x1,x2,xlabel,ylabel):
+ import numpy as np
+ import matplotlib.pyplot as plt 
+ import scipy
+ from scipy.integrate import odeint
+ def model(y,t): # put the model here
+  dydt = 1 #put dydt here
+  return(dydt)
+ y0 = 0#put init val
+ t = np.linspace(0,20)
+ y = odeint(model,y0,t)
+ plt.plot(t,y)
+ plt.xlabel(xlabel)
+ plt.ylabel(ylabel)
+ plt.show()
+
+def solve_2nd_ode(x1,x2,xlabel,ylabel):
+ # follow https://nathantypanski.com/blog/2014-08-23-ode-solver-py.html
+ #check here for answers https://scicomp.stackexchange.com/questions/34646/attempt-to-solve-2nd-order-o-d-e-using-scipy-integrate-odeint-resulting-in-error
+ #check out sympy
+ import numpy as np
+ import matplotlib.pyplot as plt 
+ import scipy
+ from scipy.integrate import odeint
+ def model(y,t): # put the model here y is a matrix
+  dydt = y[1] #put f' here
+  ddyddt = (2*y[0]*y[1]**2+y[0]+y[0]**3-y[1]**2)/(1+y[0]**2-y[1]**2) #put f'' here
+  return([dydt,ddyddt])
+ y0 = 1#put init val of y 
+ yp0 = 1#put init val of y'
+ t = np.linspace(x1,x2,200)
+ ys = odeint(model,[y0,yp0],t)
+ print("printing ys")
+ print(ys)
+ yss = ys[:,1]
+ plt.plot(t,yss)
+ plt.xlabel(xlabel)
+ plt.ylabel(ylabel)
+ plt.show()     
+
+def integral_graph(s,xrang,yrang,graph_func):
+ F = 0
+ t = 0
+ def f(x):#function to be integrated 
+  return(np.sin((2.7182818284590455)**x))
+ d = 0.001
+ for i in range(int(s/d)):
+  nF = f(t)*d+F
+  if graph_func == False:
+   plt.scatter(t,nF,s=1,c='black')
+  else: 
+   plt.scatter(t,nF,s=1,c='black')
+   plt.scatter(t,f(t),s=1,c='blue') 
+  F = nF
+  t = t + d
+ plt.axis([xrang[0],xrang[1],yrang[0],yrang[1]])
+ plt.show()
+
+def solve_2nd_ode_gen(func0,funcp0,s,graph_der,axis):
+ t = 0
+ fp0 = funcp0
+ f0 = func0
+ dt = 0.005#decrease for accuracy, increase for lower rutime
+ def fpl(if0,ifp0,t):
+  return(if0+ifp0-t)# put the value of f'' *after isolation* in terms of f' and f and x (denoted as ifp0,if0,t respectivly)
+ def fp(if0,ifp0,t):
+  nt = fpl(if0,ifp0,t)
+  return(nt*dt+ifp0)  
+ def f(if0,ifp0,t):#dont do anything here
+  return(dt*ifp0+if0) 
+ plt.scatter(t,f0)
+ for i in range(int(s/dt)):
+  nfp0 = fp(f0,fp0,t)
+  nf0 = f(f0,fp0,t)
+  if graph_der == True:
+   plt.scatter(t,f0,s=1,c='black')
+   plt.scatter(t,fp0,s=1,c='blue')
+  else:
+   plt.scatter(t,f0,s=1,c='black')
+  t = t + dt
+  f0 = nf0
+  fp0 = nfp0
+ if axis == 0:     
+  plt.show()
+ else:
+  plt.axis(axis) 
+  plt.show()   
+
+def solve_1st_ode_gen(func0,s,axis):
+ t = 0 
+ dt = 0.01
+ f0 = func0 
+ def fpl(f,t):
+  return(np.sin(f)) 
+ def fp(f,t):
+  return(fpl(f,t)*dt+f)
+ plt.scatter(t,f0)
+ for i in range(int(s/dt)):
+  nf0 = fp(f0,t)
+  plt.scatter(t,f0,s=1,c='black')
+  t = t + dt
+  f0 = nf0
+ if axis == 0:     
+  plt.show()
+ else:
+  plt.axis(axis) 
+  plt.show()   
+       
