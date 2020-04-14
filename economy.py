@@ -52,4 +52,3 @@ def go(nw,first,r):
  plt.plot(l)
  plt.axis([0,r,min(l),max(l)])
  plt.show()
- 
