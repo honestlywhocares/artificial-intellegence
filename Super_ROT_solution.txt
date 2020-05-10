@@ -1,0 +1,86 @@
+function decrypt(){
+ while (true){
+  var val = SuperRot_getEncryptedMessage()
+  console.log(" working on " + val);
+  decr(val);
+ }
+}
+
+--------------------------------------------------
+function inArray(needle,haystack)
+{
+    var count=haystack.length;
+    for(var i=0;i<count;i++)
+    {
+        if(haystack[i]===needle){return true;}
+    }
+    return false;
+}
+--------------------------------------------------
+function counter(s){
+ count = 0
+ nb = s.split(" ")
+ na = clean(nb)
+ items = ["in", "the", "i'm","is","my","on","and","you","this","we","to", "of","he","she","they're","they'll","her","his","could've","should've","don't","could","should","he'll","she'll","i","a","have","make","what","baseball!","pig","stomach","going","boys","me","after","badges","always","wish","here","stella","prepare","take","perfect","killed","walked","walk","walking","see","pay","hey","you","you'll","you're","magic","how","quit","been","goal","just","for","stinking","somebody","way","seize","asking","do","i'll","behind","every","go","want","survive","it","pull","curtain","yo","funny","bond","hello","seatbelts","off","friendship","with","hasta","trick","paris","keep","dirty","gun","robinson","beauty","devil","stupid","home","forget","know","attention","milkshake","small","one","failure","night","war","king","little","but","beautiful","beginning","she's","general","maximus","shaken","son","marcus","day","will","nobody's","smell","front","beast","your","time","come","an","too","out","strangers","mirror","alive","pictures"]
+ for (c=0; c < na.length; c++){
+  if (inArray(na[c],items)){
+   count = count + 1
+  }
+  else{
+   count = count
+  }  
+ }
+ return(count)
+}
+--------------------------------------------------
+function clean(lis){
+ nlis = []
+ for (l in lis){
+  nl = lis[l].replace("!","")
+  nnl = nl.replace(",","")
+  nnnl = nnl.replace(".","")
+  nnnnl = nnnl.replace("?","")
+  nlis.push(nnnnl)
+ } 
+ return(nlis)
+}
+
+--------------------------------------------------
+function decr(st){
+ for (i=0;i<26;i++){
+  var ans = dec(i,st)
+  if (counter(ans) >= 1){
+   SuperRot_submit(ans);
+   console.log(ans)
+   break
+  }
+  else {
+   continue;
+  }
+ }
+}  
+---------------------------------------------------
+function dec(shift,str){
+ var x = "";
+ var alphabets = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+ var special = [" ","!",".","'",";",":","?","@",","]
+ for (var i = 0; i < str.length; i++) {
+  var letter = str.charAt(i);
+  if (special.includes(letter)) {
+    x = x + letter;
+  } 
+  else {
+    var index = alphabets.indexOf(letter);
+    var nind = (index-shift)%26;
+    var nind2 = 0;
+    if (nind < 0) {
+      nind2 = 26 + nind;
+    } 
+    else {
+      nind2 = nind;
+    }
+    x = x + alphabets[nind2];
+  }
+ }
+ return(x)
+}
